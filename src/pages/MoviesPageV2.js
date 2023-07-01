@@ -70,7 +70,7 @@ const MoviesPageV2 = () => {
           ))}
         </div>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4    gap-10 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
         {!loading &&
           movies.length > 0 &&
           movies.map((item) => (

@@ -71,20 +71,20 @@ const MoviesPage = () => {
         </button>
       </div>
       {loading && (
-        <div className="grid grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {new Array(itemsPerPage).fill(0).map(() => (
             <MovieCardSkeleton key={v4()}></MovieCardSkeleton>
           ))}
         </div>
       )}
-      <div className="grid grid-cols-4 gap-10 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
         {!loading &&
           movies.length > 0 &&
           movies.map((item) => (
             <MovieCard key={item.id} item={item}></MovieCard>
           ))}
       </div>
-      <div className="mt-10">
+      <div className="mt-10 hidden md:block">
         <ReactPaginate
           breakLabel="..."
           nextLabel="next >"
