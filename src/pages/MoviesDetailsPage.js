@@ -62,15 +62,15 @@ function MovieMeta({ type = "videos" }) {
     return (
       <div className="py-10">
         <h2 className="text-center text-4xl mb-10">Casts</h2>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {cast.slice(0, 4).map((item) => (
             <div className="cast-item" key={item.id}>
               <img
                 src={tmdbAPI.imgOriginal(`${item.profile_path}`)}
                 alt=""
-                className="w-full h-[350px] object-cover rounded-lg mb-3"
+                className="w-full h-[200px] lg:h-[350px] object-cover rounded-lg mb-3"
               />
-              <h3 className="text-3xl font-medium">{item.name}</h3>
+              <h3 className="text-xl lg:text-3xl font-medium">{item.name}</h3>
             </div>
           ))}
         </div>
